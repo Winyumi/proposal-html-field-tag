@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Field Tag</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <field name="name" required>
+        <label>Name</label>
+        <input type="text" autocomplete="given-name" />
+      </field>
+
+      <field name="fruit" required>
+        <label>Fruit</label>
+        <select>
+          <option value="" selected></option>
+          <option value="apple">🍎</option>
+          <option value="orange">🍊</option>
+          <option value="lemon">🍋</option>
+        </select>
+      </field>
+
+      <field name="list" required>
+        <label>List</label>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </field>
+
+      <field name="image">
+        <label>Image</label>
+        <input type="file" accept="image/*" />
+      </field>
+
+      <div class="submit">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
