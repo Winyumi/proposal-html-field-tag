@@ -7,6 +7,7 @@
     fields.forEach((field) => {
       const uuid = crypto.randomUUID().replace(/-/g, "");
       const fieldName = field.getAttribute("name");
+      const fieldType = field.getAttribute("type");
       const fieldRequired = field.getAttribute("required") !== null;
       const fieldId = `${fieldName}__${uuid}`;
 
@@ -17,6 +18,7 @@
         el.id = el.id || fieldId;
         el.name = el.name || fieldName;
         el.required = el.required || fieldRequired;
+        if (fieldType && el.tagName === "INPUT") el.type = fieldType;
       });
     });
   }

@@ -9,9 +9,9 @@
   </head>
   <body>
     <form action="/" method="post" enctype="multipart/form-data">
-      <field name="name" required>
+      <field name="name" type="text" required>
         <label>Name</label>
-        <input type="text" autocomplete="given-name" />
+        <input autocomplete="given-name" />
       </field>
 
       <field name="fruit" required>
@@ -24,16 +24,16 @@
         </select>
       </field>
 
-      <field name="list" required>
+      <field name="list" type="text" required>
         <label>List</label>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+        <input />
+        <input />
+        <input />
       </field>
 
-      <field name="image">
+      <field name="image" type="file">
         <label>Image</label>
-        <input type="file" accept="image/*" />
+        <input accept="image/*" />
       </field>
 
       <div class="submit">
