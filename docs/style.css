@@ -44,7 +44,8 @@ textarea {
 input[type="file"] {
   padding: 0;
 }
-[required] > label::after {
+[required] > label::after,
+[required] > legend::after {
   display: inline;
   content: " *";
   color: red;
