@@ -24,6 +24,18 @@ field {
   display: grid;
   gap: 0.125em;
 }
+fielditem {
+  display: flex;
+  gap: 0.25em;
+  align-items: baseline;
+  & label {
+    translate: 0 -0.1em;
+    order: 2;
+  }
+  & input {
+    order: 1;
+  }
+}
 input,
 select,
 textarea {

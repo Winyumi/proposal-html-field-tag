@@ -24,6 +24,46 @@
         </select>
       </field>
 
+      <field name="rating" type="radio" required>
+        <label>Rating</label>
+        <fielditem>
+          <input value="5" />
+          <label>⭐⭐⭐⭐⭐</label>
+        </fielditem>
+        <fielditem>
+          <input value="4" />
+          <label>⭐⭐⭐⭐</label>
+        </fielditem>
+        <fielditem>
+          <input value="3" />
+          <label>⭐⭐⭐</label>
+        </fielditem>
+        <fielditem>
+          <input value="2" />
+          <label>⭐⭐</label>
+        </fielditem>
+        <fielditem>
+          <input value="1" />
+          <label>⭐</label>
+        </fielditem>
+      </field>
+
+      <field name="extras" type="checkbox" required>
+        <label>Extras</label>
+        <fielditem>
+          <input value="fries" />
+          <label>🍟</label>
+        </fielditem>
+        <fielditem>
+          <input value="soda" />
+          <label>🥤</label>
+        </fielditem>
+        <fielditem>
+          <input value="soup" />
+          <label>🍲</label>
+        </fielditem>
+      </field>
+
       <field name="image" type="file">
         <label>Image</label>
         <input accept="image/*" />

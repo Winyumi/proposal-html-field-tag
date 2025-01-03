@@ -20,6 +20,28 @@
         el.required = el.required || fieldRequired;
         if (fieldType && el.tagName === "INPUT") el.type = fieldType;
       });
+
+      // Handle required checkboxes
+      /** @type {NodeListOf<HTMLInputElement>} */
+      const checkboxes = field.querySelectorAll("input[type='checkbox']");
+      checkboxes.forEach((el) => {
+        if (!fieldRequired) return;
+        el.addEventListener("change", () => {
+          const hasChecked = Array.from(checkboxes).some((e) => e.checked);
+          checkboxes.forEach(
+            (e) => (e.required = hasChecked ? e.checked : true)
+          );
+        });
+      });
+
+      // Parse field items
+      const fieldItems = field.querySelectorAll("fielditem");
+      fieldItems.forEach((item, key) => {
+        const inputs = item.querySelectorAll("input");
+        const labels = item.querySelectorAll("label");
+        inputs.forEach((el) => (el.id += "_" + (key + 1)));
+        labels.forEach((el) => (el.htmlFor = inputs[0]?.id));
+      });
     });
   }
 
@@ -45,7 +67,7 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       console.log(parseFormData(new FormData(form)));
-      alert("For demo purposes only.");
+      alert("For demo purposes only. Check console for form data.");
     });
   });
 })();
