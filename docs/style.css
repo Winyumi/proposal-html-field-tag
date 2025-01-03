@@ -15,6 +15,9 @@ body {
   padding: 1rem;
   max-width: 300px;
 }
+h1 {
+  font-size: 2em;
+}
 form {
   display: flex;
   flex-direction: column;
