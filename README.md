@@ -46,7 +46,7 @@ When designing form elements, `input` and `label` are intrinsically linked and r
   </div>
 
   <div>
-    <button type="submit">Log In</button>
+    <button type="submit">Submit</button>
   </div>
 </form>
 ```
@@ -77,7 +77,7 @@ When designing form elements, `input` and `label` are intrinsically linked and r
   </field>
 
   <div>
-    <button type="submit">Log In</button>
+    <button type="submit">Submit</button>
   </div>
 </form>
 ```
